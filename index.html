@@ -40,16 +40,14 @@
       backdrop-filter: blur(12px);
     }
 
-    /* Efeito de brilho atrás da capa */
-    .glow-effect {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120%;
-      height: 120%;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 31, 63, 0) 70%);
-      z-index: -1;
+    /* Mockup do Livro em Código (Sem Imagem) */
+    .product-mockup {
+      perspective: 1000px;
+    }
+
+    .book-spine {
+      background: linear-gradient(90deg, #B8860B 0%, #D4AF37 100%);
+      box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
     }
 
     .pulse {
@@ -83,15 +81,15 @@
         Transforme o ChatGPT em um estagiário de luxo com 100 comandos técnicos validados para o Direito Brasileiro.
       </p>
 
-      <!-- Mockup Visual com a SUA IMAGEM -->
-      <div class="relative mb-16 flex justify-center">
-        <div class="glow-effect"></div>
-        <div class="relative group max-w-[320px] md:max-w-[400px]">
-          <!-- Imagem Real do Produto -->
-          <img src="capa.jpg" alt="100 Prompts de Ouro" class="rounded-xl shadow-2xl border border-amber-500/30 transform group-hover:scale-105 transition-transform duration-500">
-          
-          <!-- Selo Flutuante -->
-          <div class="absolute -bottom-4 -right-4 bg-white text-[#001F3F] px-4 py-2 rounded-lg font-black text-sm shadow-2xl border-2 border-amber-500 animate-bounce">
+      <!-- Mockup Visual do Produto (Procedural/Código) -->
+      <div class="product-mockup mb-12 flex justify-center">
+        <div class="relative w-48 h-64 book-spine rounded-r-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-all duration-500 cursor-pointer">
+          <div class="text-[#001F3F] font-bold text-center p-4">
+            <i data-lucide="scales" class="mx-auto mb-2 w-10 h-10"></i>
+            <p class="text-[10px] uppercase tracking-widest">Pack de Ouro</p>
+            <p class="text-lg leading-tight font-black">PROMPTS DE ELITE</p>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white text-[#001F3F] px-3 py-1 rounded font-black text-sm shadow-xl border border-amber-500">
             PDF + IA
           </div>
         </div>
@@ -102,7 +100,7 @@
       </button>
     </header>
 
-    <!-- Social Proof Sutil -->
+    <!-- Social Proof -->
     <div class="text-center pb-16 opacity-50">
       <p class="text-xs uppercase tracking-widest mb-4">Utilizado por advogados dos tribunais</p>
       <div class="flex flex-wrap justify-center gap-8 grayscale">
@@ -215,6 +213,7 @@
     }
 
     function checkout() {
+      // Link de checkout da Kiwify
       window.location.href = "https://pay.kiwify.com.br/extNhVa";
     }
   </script>
