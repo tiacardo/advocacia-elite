@@ -40,16 +40,59 @@
       backdrop-filter: blur(12px);
     }
 
-    .product-mockup {
+    /* --- EFEITO LIVRO 3D --- */
+    .book-container {
       perspective: 1000px;
     }
 
-    .book-spine {
-      background: linear-gradient(90deg, #B8860B 0%, #D4AF37 100%);
-      box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    .book {
+      width: 280px;
+      height: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(-25deg) rotateX(10deg);
+      transition: transform 0.5s ease;
+      box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
     }
 
-    /* Animação de pulso para o botão */
+    .book:hover {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    .book-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('capa.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: 2;
+      border-radius: 0 5px 5px 0;
+    }
+
+    /* Lombada do Livro (Lateral) */
+    .book-side {
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      background: linear-gradient(to right, #8B6914 0%, #D4AF37 100%);
+      transform: rotateY(-90deg);
+      transform-origin: left;
+      z-index: 1;
+      left: 0;
+    }
+
+    .book::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transform: translateZ(-40px);
+      z-index: 0;
+      border-radius: 0 5px 5px 0;
+    }
+    /* ----------------------- */
+
     .pulse {
       animation: pulse-animation 2s infinite;
     }
@@ -81,15 +124,13 @@
         Transforme o ChatGPT em um estagiário de luxo com 100 comandos técnicos validados para o Direito Brasileiro.
       </p>
 
-      <!-- Mockup Visual do Produto -->
-      <div class="product-mockup mb-12 flex justify-center">
-        <div class="relative w-48 h-64 book-spine rounded-r-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-all duration-500 cursor-pointer">
-          <div class="text-navy-900 font-bold text-center p-4">
-            <i data-lucide="scales" class="mx-auto mb-2 w-10 h-10"></i>
-            <p class="text-xs">PACK DE OURO</p>
-            <p class="text-lg leading-tight">PROMPTS DE ELITE</p>
-          </div>
-          <div class="absolute -bottom-4 -right-4 bg-white text-navy-900 px-3 py-1 rounded font-black text-sm shadow-xl">
+      <!-- MOCKUP LIVRO 3D -->
+      <div class="book-container mb-20 flex justify-center">
+        <div class="book">
+          <div class="book-side"></div>
+          <div class="book-cover"></div>
+          <!-- Selo Flutuante -->
+          <div class="absolute -bottom-6 -right-10 bg-white text-[#001F3F] px-4 py-2 rounded-lg font-black text-sm shadow-2xl border-2 border-amber-500 animate-bounce z-50">
             PDF + IA
           </div>
         </div>
@@ -100,7 +141,7 @@
       </button>
     </header>
 
-    <!-- Social Proof Sutil -->
+    <!-- Social Proof -->
     <div class="text-center pb-16 opacity-50">
       <p class="text-xs uppercase tracking-widest mb-4">Utilizado por advogados dos tribunais</p>
       <div class="flex flex-wrap justify-center gap-8 grayscale">
@@ -138,7 +179,7 @@
       </div>
     </section>
 
-    <!-- Chapters (Grid mais moderno) -->
+    <!-- Chapters -->
     <section class="py-16">
       <h2 class="text-3xl font-bold text-center mb-12">O que você está levando hoje:</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -160,7 +201,7 @@
       </div>
     </section>
 
-    <!-- FAQ - Essencial para Advogados -->
+    <!-- FAQ -->
     <section class="py-16 border-t border-white/10">
       <h2 class="text-2xl font-bold mb-8 text-center">Dúvidas Frequentes</h2>
       <div class="space-y-4 max-w-3xl mx-auto">
@@ -213,7 +254,6 @@
     }
 
     function checkout() {
-      // Link de checkout da Kiwify atualizado
       window.location.href = "https://pay.kiwify.com.br/extNhVa";
     }
   </script>
