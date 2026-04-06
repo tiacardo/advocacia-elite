@@ -1,289 +1,210 @@
 <!doctype html>
 <html lang="pt-BR" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Protocolo de Elite | Engenharia Jurídica de Alta Performance</title>
-  
-  <!-- Fontes de Luxo -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
-  
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  
-  <style>
-    :root {
-      --navy-deep: #020617;
-      --gold-primary: #D4AF37;
-      --gold-light: #F3E5AB;
-      --gold-dark: #996515;
-      --glass: rgba(255, 255, 255, 0.03);
-    }
-
-    body {
-      background-color: var(--navy-deep);
-      color: #f8fafc;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, .serif {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .gold-gradient {
-      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .btn-premium {
-      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-      color: var(--navy-deep);
-      box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.5);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .btn-premium:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 15px 40px -10px rgba(212, 175, 55, 0.7);
-    }
-
-    .glass-card {
-      background: var(--glass);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      border-radius: 24px;
-    }
-
-    .floating {
-      animation: floating 3s ease-in-out infinite;
-    }
-
-    @keyframes floating {
-      0%, 100% { transform: translateY(0) rotate(12deg); }
-      50% { transform: translateY(-15px) rotate(10deg); }
-    }
-
-    .border-gold-glow {
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
-    }
-  </style>
- </head>
- <body class="antialiased">
-  
-  <!-- Top Urgency -->
-  <div class="bg-gradient-to-r from-amber-700 to-amber-900 text-white text-center py-2.5 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
-    Acesso Restrito: Licenças de Alta Performance 2026 disponíveis por tempo limitado
-  </div>
-
-  <main class="max-w-6xl mx-auto px-6">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Protocolo de Elite | Engenharia Jurídica Sênior</title>
     
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 text-center">
-      <span class="inline-block px-5 py-1.5 border border-amber-500/20 rounded-full text-amber-500 text-[10px] font-bold tracking-widest uppercase mb-8 bg-amber-500/5">
-        Magistratura de Resultados
-      </span>
-      
-      <h1 class="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight">
-        A Nova Era da <br>
-        <span class="gold-gradient italic serif">Engenharia Jurídica</span>
-      </h1>
-      
-      <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-        Não é apenas um guia de prompts. É o sistema operacional definitivo para advogados sêniores que buscam <span class="text-white font-bold">blindagem técnica</span> e <span class="text-white font-bold">escala operacional</span> através da IA.
-      </p>
+    <!-- Fontes Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    
+    <style>
+        :root {
+            --navy: #020617;
+            --gold: #D4AF37;
+            --gold-dark: #996515;
+            --slate: #1e293b;
+        }
+        body {
+            background-color: var(--navy);
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gold-text { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy);
+            transition: all 0.3s ease;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .border-gold { border-color: rgba(212, 175, 55, 0.3); }
+    </style>
+</head>
+<body class="antialiased">
 
-      <!-- Premium Mockup -->
-      <div class="relative mb-16 flex justify-center">
-        <div class="w-56 h-72 glass-card border-gold-glow flex items-center justify-center floating relative z-10">
-          <div class="text-center p-6">
-            <i data-lucide="shield-check" class="w-12 h-12 mx-auto mb-4 text-amber-500 opacity-80"></i>
-            <p class="serif text-2xl font-bold leading-tight">Protocolo <br> de Elite</p>
-            <div class="mt-4 h-1 w-12 bg-amber-500 mx-auto rounded-full"></div>
-          </div>
+    <!-- Header / Logo -->
+    <nav class="py-6 px-6 border-b border-white/5">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="serif italic text-xl gold-text font-bold tracking-tighter">O Protocolo de Elite</span>
+            <button onclick="scrollToOffer()" class="text-[10px] border border-gold gold-text px-4 py-2 rounded-full font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition">Acesso Premium</button>
         </div>
-        <!-- Decorative Glow -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px]"></div>
-      </div>
+    </nav>
 
-      <button onclick="checkout()" class="btn-premium px-12 py-6 rounded-2xl text-xl font-black uppercase tracking-tighter">
-        Garantir Acesso Premium
-      </button>
-      
-      <p class="mt-6 text-gray-500 text-xs flex items-center justify-center gap-2">
-        <i data-lucide="lock" class="w-3 h-3"></i> Pagamento Criptografado & Acesso Imediato
-      </p>
-    </header>
+    <!-- Hero Section (Inspirada na Doc9) -->
+    <section class="pt-16 pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block px-4 py-1 bg-gold/10 text-gold text-[10px] font-bold uppercase tracking-[0.2em] rounded-full mb-8 border border-gold/20">
+                Engenharia Jurídica de Alta Performance
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight serif italic">
+                Domine a IA e alcance a <br>
+                <span class="gold-text">Magistratura de Resultados</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                O sistema operacional definitivo com <span class="text-white font-bold">100 Prompts Sêniores</span> fundamentados no CPC/15 e Súmulas do STJ para blindar suas peças e escalar seu escritório.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button onclick="checkout()" class="btn-gold px-10 py-5 rounded-xl text-lg w-full md:w-auto">
+                    Quero o Protocolo Agora
+                </button>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest">Acesso Vitalício • R$ 97</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Authority Logos -->
-    <div class="flex flex-wrap justify-center gap-10 md:gap-20 py-12 border-y border-white/5 opacity-30 grayscale">
-      <span class="serif text-2xl font-bold italic">CPC/15</span>
-      <span class="serif text-2xl font-bold italic">STJ</span>
-      <span class="serif text-2xl font-bold italic">Súmulas 2026</span>
-      <span class="serif text-2xl font-bold italic">CLT</span>
+    <!-- Social Proof / Logos -->
+    <div class="bg-white/5 py-10 px-6 border-y border-white/5">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-8 md:gap-16 opacity-30 grayscale">
+            <span class="serif text-xl font-bold italic">CPC/15</span>
+            <span class="serif text-xl font-bold italic">STJ</span>
+            <span class="serif text-xl font-bold italic">Súmulas 2026</span>
+            <span class="serif text-xl font-bold italic">CLT</span>
+        </div>
     </div>
 
-    <!-- The Contrast Section -->
-    <section class="py-24">
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div class="space-y-8">
-          <h2 class="text-4xl font-bold leading-tight serif italic">
-            O fim da advocacia <br> <span class="text-red-500/80">braçal e artesanal.</span>
-          </h2>
-          <p class="text-gray-400 leading-relaxed">
-            Enquanto a maioria utiliza a IA para textos genéricos, o **Protocolo de Elite** utiliza fundamentos da Súmula 479 do STJ e o conceito de 'Mínimo Existencial' para anular teses defensivas antes mesmo delas serem escritas.
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <i data-lucide="check" class="text-amber-500 w-5 h-5 mt-0.5"></i>
-              <span>Redação de Exordiais com foco em Nexo Causal e Vício Reditório.</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <i data-lucide="check" class="text-amber-500 w-5 h-5 mt-0.5"></i>
-              <span>Scripts de vendas High-Ticket para fechar contratos de alto valor.</span>
-            </li>
-          </ul>
+    <!-- O que você vai aprender (Grid de Benefícios) -->
+    <section class="py-24 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold serif italic mb-4">A Arquitetura da Elite</h2>
+                <p class="text-gray-500 text-sm uppercase tracking-widest">O que está incluso no seu acesso</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bloco 1 -->
+                <div class="glass-card p-8 rounded-3xl border-gold">
+                    <i data-lucide="shield-check" class="gold-text mb-6 w-10 h-10"></i>
+                    <h3 class="text-xl font-bold mb-4 serif">Blindagem Técnica</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Petições fundamentadas na Súmula 479 do STJ e teses de Mínimo Existencial. Anule a tese de 'culpa de terceiro' em segundos.</p>
+                </div>
+                <!-- Bloco 2 -->
+                <div class="glass-card p-8 rounded-3xl border-gold">
+                    <i data-lucide="zap" class="gold-text mb-6 w-10 h-10"></i>
+                    <h3 class="text-xl font-bold mb-4 serif">Escala Operacional</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Reduza 3 horas de redação braçal para 45 segundos de revisão estratégica. Ganhe 2 horas de liberdade por dia.</p>
+                </div>
+                <!-- Bloco 3 -->
+                <div class="glass-card p-8 rounded-3xl border-gold">
+                    <i data-lucide="trending-up" class="gold-text mb-6 w-10 h-10"></i>
+                    <h3 class="text-xl font-bold mb-4 serif">Honorários High-Ticket</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Scripts de vendas e marketing de autoridade para fechar contratos de alto valor e se posicionar como referência.</p>
+                </div>
+            </div>
         </div>
-        <div class="glass-card p-8 border-gold-glow relative overflow-hidden group">
-          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50"></div>
-          <h3 class="text-xl font-bold mb-6 serif italic">Eficiência Operacional</h3>
-          <div class="space-y-6">
-            <div class="flex justify-between items-end">
-              <span class="text-xs text-gray-500 uppercase tracking-widest">Petição Manual</span>
-              <span class="text-xs text-red-500">4-6 Horas</span>
-            </div>
-            <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-              <div class="w-full h-full bg-red-500/50"></div>
-            </div>
-            <div class="flex justify-between items-end">
-              <span class="text-xs text-amber-500 uppercase tracking-widest font-bold">Protocolo de Elite</span>
-              <span class="text-xs text-amber-500 font-bold">45 Segundos</span>
-            </div>
-            <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-              <div class="w-[5%] h-full bg-amber-500 shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- The 5 Pillars Grid -->
-    <section class="py-20">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold serif italic mb-4">Arquitetura do Protocolo</h2>
-        <p class="text-gray-500 text-sm uppercase tracking-[0.3em]">100 Comandos de Alta Complexidade</p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Pillar 1 -->
-        <div class="glass-card p-8 hover:border-amber-500/50 transition-all duration-500 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-navy-deep transition-colors">
-            <i data-lucide="landmark"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Engenharia Jurídica</h4>
-          <p class="text-gray-500 text-sm leading-relaxed italic">Consumidor, Bancário e Saúde. Teses de Desvio Produtivo e Mínimo Existencial.</p>
+    <!-- Seção de Conteúdo (Os 5 Blocos) -->
+    <section class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold serif italic mb-12 text-center">100 Prompts Validados</h2>
+            
+            <div class="space-y-4">
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                    <span class="text-2xl font-black gold-text opacity-50">01</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Direito do Consumidor (40 Prompts)</h4>
+                        <p class="text-gray-500 text-xs">Bancos, Aéreo, Telefonia e E-commerce com teses de Desvio Produtivo.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                    <span class="text-2xl font-black gold-text opacity-50">02</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Imobiliário & Civil (20 Prompts)</h4>
+                        <p class="text-gray-500 text-xs">Despejos, Usucapião, Distratos e Responsabilidade Civil Subjetiva.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                    <span class="text-2xl font-black gold-text opacity-50">03</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Família & Sucessões (20 Prompts)</h4>
+                        <p class="text-gray-500 text-xs">IDPJ Inverso, Ocultação de Bens e Inventários Extrajudiciais.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                    <span class="text-2xl font-black gold-text opacity-50">04</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Trabalho & Previdência (20 Prompts)</h4>
+                        <p class="text-gray-500 text-xs">Pejotização, Rescisão Indireta e Revisão da Vida Toda.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Pillar 2 -->
-        <div class="glass-card p-8 hover:border-amber-500/50 transition-all duration-500 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-navy-deep transition-colors">
-            <i data-lucide="home"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Imobiliário & Civil</h4>
-          <p class="text-gray-500 text-sm leading-relaxed italic">Despejos, Usucapião, Distratos e Responsabilidade Civil Subjetiva.</p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="glass-card p-8 hover:border-amber-500/50 transition-all duration-500 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-navy-deep transition-colors">
-            <i data-lucide="users"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Família & Sucessões</h4>
-          <p class="text-gray-500 text-sm leading-relaxed italic">Divórcios complexos, Inventários Extrajudiciais e Abandono Afetivo.</p>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="glass-card p-8 hover:border-amber-500/50 transition-all duration-500 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-navy-deep transition-colors">
-            <i data-lucide="briefcase"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Trabalho & Previdência</h4>
-          <p class="text-gray-500 text-sm leading-relaxed italic">Pejotização, Rescisão Indireta, Revisão da Vida Toda e BPC/LOAS.</p>
-        </div>
-
-        <!-- Pillar 5 -->
-        <div class="glass-card p-8 hover:border-amber-500/50 transition-all duration-500 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-navy-deep transition-colors">
-            <i data-lucide="trending-up"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Gestão & Marketing</h4>
-          <p class="text-gray-500 text-sm leading-relaxed italic">Scripts High-Ticket, Propostas Irrecusáveis e Autoridade no LinkedIn.</p>
-        </div>
-
-        <!-- Pillar 6 (Special) -->
-        <div class="glass-card p-8 border-amber-500 bg-amber-500/5 group">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center mb-6 text-navy-deep">
-            <i data-lucide="sparkles"></i>
-          </div>
-          <h4 class="text-xl font-bold mb-3 serif">Prompt Mestre</h4>
-          <p class="text-gray-300 text-sm leading-relaxed font-bold italic">O comando de ativação que transforma sua IA em um Engenheiro-Chefe de Petições Sênior.</p>
-        </div>
-      </div>
     </section>
 
-    <!-- Final Offer -->
-    <section id="offer" class="py-24 text-center">
-      <div class="glass-card p-12 md:p-20 border-2 border-amber-500/30 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-amber-500"></div>
-        
-        <h2 class="text-4xl md:text-6xl font-black mb-6 serif italic">Acesso Vitalício</h2>
-        <p class="text-gray-400 mb-12 uppercase tracking-[0.2em] text-xs">Invista na ferramenta que define o futuro da sua carreira</p>
-        
-        <div class="flex flex-col items-center justify-center mb-12">
-          <span class="text-gray-500 line-through text-lg mb-2">R$ 297,00</span>
-          <div class="flex items-start gap-2">
-            <span class="text-2xl font-bold mt-2 text-amber-500">R$</span>
-            <span class="text-8xl font-black gold-gradient serif">97</span>
-          </div>
-          <p class="text-gray-500 text-sm mt-4 italic">Pagamento Único | Sem Mensalidades</p>
-        </div>
+    <!-- Oferta Final -->
+    <section id="offer" class="py-24 px-6">
+        <div class="max-w-3xl mx-auto glass-card p-12 rounded-[40px] border-2 border-gold/30 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gold"></div>
+            
+            <h2 class="text-4xl font-bold serif italic mb-6">Acesso Vitalício</h2>
+            <p class="text-gray-400 mb-10 uppercase tracking-widest text-xs">Oferta de Lançamento 2026</p>
+            
+            <div class="mb-12">
+                <span class="text-gray-500 line-through text-lg">R$ 297,00</span>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-2xl font-bold gold-text">R$</span>
+                    <span class="text-8xl font-black gold-text serif">97</span>
+                </div>
+            </div>
 
-        <button onclick="checkout()" class="btn-premium px-16 py-7 rounded-2xl text-2xl font-black uppercase tracking-tighter w-full md:w-auto">
-          Adquirir Protocolo Agora
-        </button>
-
-        <div class="mt-12 grid grid-cols-3 gap-4 opacity-40 max-w-md mx-auto">
-          <div class="text-[10px] uppercase font-bold tracking-widest"><i data-lucide="check-circle" class="w-4 h-4 mx-auto mb-2"></i> Garantia 7 Dias</div>
-          <div class="text-[10px] uppercase font-bold tracking-widest"><i data-lucide="zap" class="w-4 h-4 mx-auto mb-2"></i> Entrega Imediata</div>
-          <div class="text-[10px] uppercase font-bold tracking-widest"><i data-lucide="shield-check" class="w-4 h-4 mx-auto mb-2"></i> Compra Segura</div>
+            <button onclick="checkout()" class="btn-gold w-full py-6 rounded-2xl text-2xl shadow-2xl">
+                Adquirir Agora
+            </button>
+            
+            <div class="mt-10 flex justify-center gap-6 opacity-40">
+                <i data-lucide="shield-check"></i>
+                <i data-lucide="credit-card"></i>
+                <i data-lucide="zap"></i>
+            </div>
         </div>
-      </div>
     </section>
 
-  </main>
+    <footer class="py-16 text-center border-t border-white/5">
+        <p class="serif italic text-xl gold-text mb-4">O Protocolo de Elite</p>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em] mb-8">Engenharia Jurídica de Alta Performance</p>
+        <div class="text-gray-500 text-[10px] space-y-2">
+            <p>© 2026 Advocacia de Elite. Todos os direitos reservados.</p>
+            <p>Conteúdo proprietário — reprodução proibida.</p>
+        </div>
+    </footer>
 
-  <footer class="py-16 text-center border-t border-white/5">
-    <p class="serif italic text-xl gold-text mb-4">O Protocolo de Elite</p>
-    <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em] mb-8">Engenharia Jurídica de Alta Performance</p>
-    <div class="text-gray-500 text-[10px] space-y-2">
-      <p>© 2026 Advocacia de Elite. Todos os direitos reservados.</p>
-      <p>Conteúdo proprietário — reprodução proibida.</p>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-
-    function scrollToOffer() {
-      document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function checkout() {
-      // Link de checkout da Kiwify
-      window.location.href = "https://pay.kiwify.com.br/extNhVa";
-    }
-  </script>
- </body>
+    <script>
+        lucide.createIcons();
+        function scrollToOffer() {
+            document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
+        }
+        function checkout() {
+            window.location.href = "https://pay.kiwify.com.br/extNhVa";
+        }
+    </script>
+</body>
 </html>
