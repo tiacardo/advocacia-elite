@@ -12,7 +12,7 @@
         body { background-color: var(--navy); color: #f8fafc; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
         .gold-text { color: var(--gold); }
-        .btn-gold { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: var(--navy); font-weight: 800; text-transform: uppercase; }
+        .btn-gold { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: #020617; font-weight: 800; text-transform: uppercase; }
         .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.1); backdrop-filter: blur(10px); }
     </style>
 </head>
@@ -23,30 +23,53 @@
 
     <section class="pt-12 pb-12 px-6 text-center">
         <h1 class="text-4xl md:text-6xl font-extrabold mb-6 serif italic gold-text">ArchiLex Protocolo de Elite</h1>
-        <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">100 Prompts Sêniores para blindar suas peças e escalar seu escritório.</p>
+        <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">Transforme 3 horas de redação braçal em 45 segundos de revisão estratégica.</p>
         <button onclick="checkout()" class="btn-gold px-10 py-5 rounded-xl text-lg shadow-xl">Quero o Protocolo Agora</button>
     </section>
 
-    <!-- SEÇÃO DO VÍDEO -->
-    <section class="py-12 px-6">
+    <section class="py-12 px-6 bg-white/[0.02]">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-8">
                 <h2 class="text-2xl serif italic gold-text">Análise Técnica ArchiLex</h2>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">O Futuro da Advocacia 2026</p>
+                <p class="text-gray-500 text-xs uppercase tracking-widest">Assista e entenda a Engenharia Jurídica</p>
             </div>
-            <div class="relative aspect-video rounded-3xl overflow-hidden border-2 border-gold/30 shadow-2xl">
-                <!-- O VÍDEO APARECERÁ AQUI -->
-                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            <div class="relative aspect-video rounded-3xl overflow-hidden border-2 border-gold/30 shadow-2xl shadow-gold/10">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/cW8gSqth4kY" title="ArchiLex Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 text-center">
-        <div class="max-w-2xl mx-auto glass-card p-12 rounded-[40px] border-2 border-gold/30">
-            <h2 class="text-4xl font-bold serif italic mb-6 gold-text">R$ 97</h2>
-            <button onclick="checkout()" class="btn-gold w-full py-6 rounded-2xl text-2xl">Adquirir Agora</button>
+    <section class="py-12 px-6 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="glass-card p-8 rounded-3xl text-center border-gold/20">
+            <i data-lucide="shield-check" class="gold-text mx-auto mb-4 w-10 h-10"></i>
+            <h3 class="serif gold-text text-xl mb-2">Blindagem Técnica</h3>
+            <p class="text-gray-400 text-sm">Teses do STJ e Mínimo Existencial.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl text-center border-gold/20">
+            <i data-lucide="zap" class="gold-text mx-auto mb-4 w-10 h-10"></i>
+            <h3 class="serif gold-text text-xl mb-2">Escala Real</h3>
+            <p class="text-gray-400 text-sm">Ganhe 2h de liberdade por dia.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl text-center border-gold/20">
+            <i data-lucide="trending-up" class="gold-text mx-auto mb-4 w-10 h-10"></i>
+            <h3 class="serif gold-text text-xl mb-2">Honorários Elite</h3>
+            <p class="text-gray-400 text-sm">Scripts para fechar contratos High-Ticket.</p>
         </div>
     </section>
+
+    <section id="offer" class="py-20 px-6 text-center">
+        <div class="max-w-2xl mx-auto glass-card p-12 rounded-[40px] border-2 border-gold/30">
+            <p class="text-gray-500 line-through text-sm mb-2">R$ 297,00</p>
+            <h2 class="text-6xl font-bold serif italic mb-6 gold-text">R$ 97</h2>
+            <button onclick="checkout()" class="btn-gold w-full py-6 rounded-2xl text-2xl shadow-2xl active:scale-95 transition-transform">Adquirir Agora</button>
+            <p class="text-[10px] text-gray-600 uppercase tracking-widest mt-6">Acesso Vitalício • Pagamento Único</p>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-white/5">
+        <p class="serif italic text-xl gold-text mb-2">ArchiLex</p>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em]">Engenharia Jurídica de Alta Performance</p>
+    </footer>
 
     <script>
         lucide.createIcons();
